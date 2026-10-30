@@ -40,6 +40,9 @@ namespace NFLDatabase
                 app.UseHsts();
             }
 
+            // Number inputs always post decimals with a dot (e.g. 7.5 sacks), so don't use the PC's culture (hu-HU expects 7,5)
+            app.UseRequestLocalization("en-US");
+
             app.UseHttpsRedirection();
 
             app.UseRouting();

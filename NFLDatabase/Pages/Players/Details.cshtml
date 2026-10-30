@@ -1,0 +1,84 @@
+@page
+@model NFLDatabase.Pages.Players.DetailsModel
+
+@{
+    ViewData["Title"] = "Player Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.HeadshotUrl)</dt>
+        <dd class="col-sm-10">
+            @if (!string.IsNullOrEmpty(Model.Player.HeadshotUrl))
+            {
+                <img src="@Model.Player.HeadshotUrl" alt="@Model.Player.FullName" height="120" />
+            }
+        </dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.FullName)</dt>
+        <dd class="col-sm-10">@Model.Player.FullName</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.JerseyNumber)</dt>
+        <dd class="col-sm-10">@Model.Player.JerseyNumber</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.Position)</dt>
+        <dd class="col-sm-10">@Model.Player.Position</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.Side)</dt>
+        <dd class="col-sm-10">@Html.DisplayFor(m => m.Player.Side)</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.Team)</dt>
+        <dd class="col-sm-10">@(Model.Player.Team?.Name ?? "Free agent")</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.HeightInches)</dt>
+        <dd class="col-sm-10">@Model.Player.HeightInches</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.WeightLbs)</dt>
+        <dd class="col-sm-10">@Model.Player.WeightLbs</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.Age)</dt>
+        <dd class="col-sm-10">@Model.Player.Age</dd>
+        <dt class="col-sm-2">@Html.DisplayNameFor(m => m.Player.College)</dt>
+        <dd class="col-sm-10">@Model.Player.College</dd>
+    </dl>
+</div>
+
+<h4>Season stats</h4>
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th>Season</th>
+            <th>Games</th>
+            <th>Pass Yds</th>
+            <th>Pass TD</th>
+            <th>Rush Yds</th>
+            <th>Rush TD</th>
+            <th>Rec Yds</th>
+            <th>Rec TD</th>
+            <th>Tackles</th>
+            <th>Sacks</th>
+            <th>INT</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var s in Model.Player.SeasonStats.OrderByDescending(s => s.Season))
+        {
+            <tr>
+                <td>@s.Season</td>
+                <td>@s.GamesPlayed</td>
+                <td>@s.PassingYards</td>
+                <td>@s.PassingTouchdowns</td>
+                <td>@s.RushingYards</td>
+                <td>@s.RushingTouchdowns</td>
+                <td>@s.ReceivingYards</td>
+                <td>@s.ReceivingTouchdowns</td>
+                <td>@s.TotalTackles</td>
+                <td>@s.Sacks</td>
+                <td>@s.Interceptions</td>
+                <td><a asp-page="/Stats/Details" asp-route-id="@s.Id">All stats</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Player.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

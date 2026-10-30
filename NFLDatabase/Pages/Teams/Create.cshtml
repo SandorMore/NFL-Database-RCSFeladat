@@ -1,0 +1,54 @@
+@page
+@model NFLDatabase.Pages.Teams.CreateModel
+
+@{
+    ViewData["Title"] = "Create Team";
+}
+
+<h1>Create</h1>
+
+<h4>Team</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Team.Name" class="control-label"></label>
+                <input asp-for="Team.Name" class="form-control" />
+                <span asp-validation-for="Team.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Team.Abbreviation" class="control-label"></label>
+                <input asp-for="Team.Abbreviation" class="form-control" />
+                <span asp-validation-for="Team.Abbreviation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Team.City" class="control-label"></label>
+                <input asp-for="Team.City" class="form-control" />
+                <span asp-validation-for="Team.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Team.Color" class="control-label"></label>
+                <input asp-for="Team.Color" class="form-control" />
+                <span asp-validation-for="Team.Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Team.LogoUrl" class="control-label"></label>
+                <input asp-for="Team.LogoUrl" class="form-control" />
+                <span asp-validation-for="Team.LogoUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

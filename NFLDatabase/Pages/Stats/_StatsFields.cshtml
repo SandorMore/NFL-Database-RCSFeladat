@@ -1,0 +1,103 @@
+@* Shared stat inputs for Create and Edit. Used as <partial name="_StatsFields" for="Stats" /> so the "Stats." prefix is kept for model binding. *@
+@model NFLDatabase.Models.PlayerSeasonStats
+
+<div class="row">
+    <div class="col-md-4 form-group">
+        <label asp-for="Season" class="control-label"></label>
+        <input asp-for="Season" class="form-control" />
+        <span asp-validation-for="Season" class="text-danger"></span>
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="GamesPlayed" class="control-label"></label>
+        <input asp-for="GamesPlayed" class="form-control" />
+    </div>
+</div>
+
+<h5 class="mt-3">Passing</h5>
+<div class="row">
+    <div class="col-md-4 form-group">
+        <label asp-for="PassingYards" class="control-label"></label>
+        <input asp-for="PassingYards" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="PassingTouchdowns" class="control-label"></label>
+        <input asp-for="PassingTouchdowns" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="InterceptionsThrown" class="control-label"></label>
+        <input asp-for="InterceptionsThrown" class="form-control" />
+    </div>
+</div>
+
+<h5 class="mt-3">Rushing</h5>
+<div class="row">
+    <div class="col-md-4 form-group">
+        <label asp-for="RushingAttempts" class="control-label"></label>
+        <input asp-for="RushingAttempts" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="RushingYards" class="control-label"></label>
+        <input asp-for="RushingYards" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="RushingTouchdowns" class="control-label"></label>
+        <input asp-for="RushingTouchdowns" class="form-control" />
+    </div>
+</div>
+
+<h5 class="mt-3">Receiving</h5>
+<div class="row">
+    <div class="col-md-4 form-group">
+        <label asp-for="Receptions" class="control-label"></label>
+        <input asp-for="Receptions" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="ReceivingYards" class="control-label"></label>
+        <input asp-for="ReceivingYards" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="ReceivingTouchdowns" class="control-label"></label>
+        <input asp-for="ReceivingTouchdowns" class="form-control" />
+    </div>
+</div>
+
+<h5 class="mt-3">Defense</h5>
+<div class="row">
+    <div class="col-md-4 form-group">
+        <label asp-for="TotalTackles" class="control-label"></label>
+        <input asp-for="TotalTackles" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="TacklesForLoss" class="control-label"></label>
+        <input asp-for="TacklesForLoss" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="Sacks" class="control-label"></label>
+        <input asp-for="Sacks" class="form-control" step="0.5" />
+        <span asp-validation-for="Sacks" class="text-danger"></span>
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="Interceptions" class="control-label"></label>
+        <input asp-for="Interceptions" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="PassesDefended" class="control-label"></label>
+        <input asp-for="PassesDefended" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="ForcedFumbles" class="control-label"></label>
+        <input asp-for="ForcedFumbles" class="form-control" />
+    </div>
+</div>
+
+<h5 class="mt-3">Kicking</h5>
+<div class="row">
+    <div class="col-md-4 form-group">
+        <label asp-for="FieldGoalsMade" class="control-label"></label>
+        <input asp-for="FieldGoalsMade" class="form-control" />
+    </div>
+    <div class="col-md-4 form-group">
+        <label asp-for="FieldGoalAttempts" class="control-label"></label>
+        <input asp-for="FieldGoalAttempts" class="form-control" />
+    </div>
+</div>

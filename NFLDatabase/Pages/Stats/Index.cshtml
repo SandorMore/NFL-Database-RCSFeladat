@@ -1,0 +1,52 @@
+@page
+@model NFLDatabase.Pages.Stats.IndexModel
+
+@{
+    ViewData["Title"] = "Season Stats";
+}
+
+<h1>Season Stats</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<table class="table table-sm">
+    <thead>
+        <tr>
+            <th>Player</th>
+            <th>@Html.DisplayNameFor(m => m.Stats[0].Season)</th>
+            <th>@Html.DisplayNameFor(m => m.Stats[0].GamesPlayed)</th>
+            <th>@Html.DisplayNameFor(m => m.Stats[0].PassingYards)</th>
+            <th>@Html.DisplayNameFor(m => m.Stats[0].RushingYards)</th>
+            <th>@Html.DisplayNameFor(m => m.Stats[0].ReceivingYards)</th>
+            <th>@Html.DisplayNameFor(m => m.Stats[0].TotalTouchdowns)</th>
+            <th>@Html.DisplayNameFor(m => m.Stats[0].TotalTackles)</th>
+            <th>@Html.DisplayNameFor(m => m.Stats[0].Sacks)</th>
+            <th>@Html.DisplayNameFor(m => m.Stats[0].Interceptions)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Stats)
+        {
+            <tr>
+                <td>@item.Player?.FullName</td>
+                <td>@item.Season</td>
+                <td>@item.GamesPlayed</td>
+                <td>@item.PassingYards</td>
+                <td>@item.RushingYards</td>
+                <td>@item.ReceivingYards</td>
+                <td>@item.TotalTouchdowns</td>
+                <td>@item.TotalTackles</td>
+                <td>@item.Sacks</td>
+                <td>@item.Interceptions</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

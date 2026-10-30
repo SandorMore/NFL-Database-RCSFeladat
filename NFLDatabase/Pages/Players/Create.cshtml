@@ -1,0 +1,87 @@
+@page
+@using NFLDatabase.Models
+@model NFLDatabase.Pages.Players.CreateModel
+
+@{
+    ViewData["Title"] = "Create Player";
+}
+
+<h1>Create</h1>
+
+<h4>Player</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Player.FirstName" class="control-label"></label>
+                <input asp-for="Player.FirstName" class="form-control" />
+                <span asp-validation-for="Player.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.LastName" class="control-label"></label>
+                <input asp-for="Player.LastName" class="form-control" />
+                <span asp-validation-for="Player.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.JerseyNumber" class="control-label"></label>
+                <input asp-for="Player.JerseyNumber" class="form-control" />
+                <span asp-validation-for="Player.JerseyNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.Position" class="control-label"></label>
+                <input asp-for="Player.Position" class="form-control" />
+                <span asp-validation-for="Player.Position" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.Side" class="control-label"></label>
+                <select asp-for="Player.Side" class="form-control" asp-items="Html.GetEnumSelectList<PlayerSide>()"></select>
+                <span asp-validation-for="Player.Side" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.TeamId" class="control-label"></label>
+                <select asp-for="Player.TeamId" class="form-control" asp-items="Model.TeamOptions">
+                    <option value="">-- Free agent --</option>
+                </select>
+                <span asp-validation-for="Player.TeamId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.HeightInches" class="control-label"></label>
+                <input asp-for="Player.HeightInches" class="form-control" />
+                <span asp-validation-for="Player.HeightInches" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.WeightLbs" class="control-label"></label>
+                <input asp-for="Player.WeightLbs" class="form-control" />
+                <span asp-validation-for="Player.WeightLbs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.Age" class="control-label"></label>
+                <input asp-for="Player.Age" class="form-control" />
+                <span asp-validation-for="Player.Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.College" class="control-label"></label>
+                <input asp-for="Player.College" class="form-control" />
+                <span asp-validation-for="Player.College" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Player.HeadshotUrl" class="control-label"></label>
+                <input asp-for="Player.HeadshotUrl" class="form-control" />
+                <span asp-validation-for="Player.HeadshotUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

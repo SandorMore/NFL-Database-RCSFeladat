@@ -1,0 +1,67 @@
+@page
+@model NFLDatabase.Pages.Stats.DetailsModel
+
+@{
+    ViewData["Title"] = "Season Stats Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>
+        <a asp-page="/Players/Details" asp-route-id="@Model.Stats.PlayerId">@Model.Stats.Player?.FullName</a>
+        - @Model.Stats.Season season
+    </h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.GamesPlayed)</dt>
+        <dd class="col-sm-9">@Model.Stats.GamesPlayed</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.PassingYards)</dt>
+        <dd class="col-sm-9">@Model.Stats.PassingYards</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.PassingTouchdowns)</dt>
+        <dd class="col-sm-9">@Model.Stats.PassingTouchdowns</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.InterceptionsThrown)</dt>
+        <dd class="col-sm-9">@Model.Stats.InterceptionsThrown</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.RushingAttempts)</dt>
+        <dd class="col-sm-9">@Model.Stats.RushingAttempts</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.RushingYards)</dt>
+        <dd class="col-sm-9">@Model.Stats.RushingYards</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.RushingTouchdowns)</dt>
+        <dd class="col-sm-9">@Model.Stats.RushingTouchdowns</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.Receptions)</dt>
+        <dd class="col-sm-9">@Model.Stats.Receptions</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.ReceivingYards)</dt>
+        <dd class="col-sm-9">@Model.Stats.ReceivingYards</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.ReceivingTouchdowns)</dt>
+        <dd class="col-sm-9">@Model.Stats.ReceivingTouchdowns</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.TotalTouchdowns)</dt>
+        <dd class="col-sm-9">@Model.Stats.TotalTouchdowns</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.TotalTackles)</dt>
+        <dd class="col-sm-9">@Model.Stats.TotalTackles</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.TacklesForLoss)</dt>
+        <dd class="col-sm-9">@Model.Stats.TacklesForLoss</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.Sacks)</dt>
+        <dd class="col-sm-9">@Model.Stats.Sacks</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.Interceptions)</dt>
+        <dd class="col-sm-9">@Model.Stats.Interceptions</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.PassesDefended)</dt>
+        <dd class="col-sm-9">@Model.Stats.PassesDefended</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.ForcedFumbles)</dt>
+        <dd class="col-sm-9">@Model.Stats.ForcedFumbles</dd>
+
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.FieldGoalsMade)</dt>
+        <dd class="col-sm-9">@Model.Stats.FieldGoalsMade</dd>
+        <dt class="col-sm-3">@Html.DisplayNameFor(m => m.Stats.FieldGoalAttempts)</dt>
+        <dd class="col-sm-9">@Model.Stats.FieldGoalAttempts</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Stats.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

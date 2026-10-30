@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NFLDatabase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7ad6a2a7a727fb493b5df8c2434e32c64453dcfa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82fab4bb108b144fb7aa8e9102d1d7fafaa94a70")]
 [assembly: System.Reflection.AssemblyProductAttribute("NFLDatabase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NFLDatabase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

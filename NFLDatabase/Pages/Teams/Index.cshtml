@@ -1,0 +1,38 @@
+@page
+@model NFLDatabase.Pages.Teams.IndexModel
+
+@{
+    ViewData["Title"] = "Teams";
+}
+
+<h1>Teams</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(m => m.Teams[0].Name)</th>
+            <th>@Html.DisplayNameFor(m => m.Teams[0].Abbreviation)</th>
+            <th>@Html.DisplayNameFor(m => m.Teams[0].City)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Teams)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Abbreviation</td>
+                <td>@item.City</td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
