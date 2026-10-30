@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NFLDatabase")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c0f8d9717e5de14f87173abb0d93a75d98a2f81")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6712c3b5d9fff347a8a231d7a1b11a3872060106")]
 [assembly: System.Reflection.AssemblyProductAttribute("NFLDatabase")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NFLDatabase")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

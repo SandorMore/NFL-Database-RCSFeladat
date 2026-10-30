@@ -1,3 +1,5 @@
+using NFLDatabase.Import;
+
 namespace NFLDatabase
 {
     public class Program
@@ -8,6 +10,9 @@ namespace NFLDatabase
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            builder.Services.AddHttpClient<EspnClient>(c =>
+                c.BaseAddress = new Uri("https://site.api.espn.com/apis/site/v2/sports/football/nfl/"));
 
             var app = builder.Build();
 
