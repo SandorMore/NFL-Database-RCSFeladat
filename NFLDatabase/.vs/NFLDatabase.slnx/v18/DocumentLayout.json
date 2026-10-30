@@ -50,8 +50,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-10-30T13:17:53.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T13:17:53.662Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "Data\\NFLDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T13:14:16.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T13:14:16.075Z"
             },
             {
               "$type": "Document",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "Models\\Player.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAswCAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T13:10:22.368Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T13:10:22.368Z"
             },
             {
               "$type": "Document",
@@ -89,8 +86,7 @@
               "RelativeToolTip": "Models\\PlayerSide.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T13:10:18.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T13:10:18.658Z"
             },
             {
               "$type": "Document",
@@ -102,8 +98,7 @@
               "RelativeToolTip": "Import\\EspnClient.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T12:59:35.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T12:59:35.05Z"
             },
             {
               "$type": "Document",
@@ -115,8 +110,7 @@
               "RelativeToolTip": "Import\\EspnDtos.cs",
               "ViewState": "AgIAADEAAAAAAAAAAIA4wEIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T12:59:38.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T12:59:38.134Z"
             },
             {
               "$type": "Document",
@@ -126,7 +120,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-30T11:16:37.875Z",
               "EditorCaption": ""

@@ -3,16 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|c:\\users\\msaso\\desktop\\kodok\\c#\\nflfeladat-rcs\\nfldatabase\\import\\espnclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|solutionrelative:import\\espnclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|c:\\users\\msaso\\desktop\\kodok\\c#\\nflfeladat-rcs\\nfldatabase\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|c:\\users\\msaso\\desktop\\kodok\\c#\\nflfeladat-rcs\\nfldatabase\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|c:\\users\\msaso\\desktop\\kodok\\c#\\nflfeladat-rcs\\nfldatabase\\data\\nfldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|solutionrelative:data\\nfldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|c:\\users\\msaso\\desktop\\kodok\\c#\\nflfeladat-rcs\\nfldatabase\\models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|solutionrelative:models\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|c:\\users\\msaso\\desktop\\kodok\\c#\\nflfeladat-rcs\\nfldatabase\\models\\playerside.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|solutionrelative:models\\playerside.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|c:\\users\\msaso\\desktop\\kodok\\c#\\nflfeladat-rcs\\nfldatabase\\import\\espndtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|solutionrelative:import\\espndtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|c:\\users\\msaso\\desktop\\kodok\\c#\\nflfeladat-rcs\\nfldatabase\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|c:\\users\\msaso\\desktop\\kodok\\c#\\nflfeladat-rcs\\nfldatabase\\import\\espnclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74FF253B-8D0D-9FC4-E234-66D7F3D9C993}|NFLDatabase.csproj|solutionrelative:import\\espnclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,43 +38,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-30T13:17:53.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NFLDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Data\\NFLDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\NFLDbContext.cs",
+              "ToolTip": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Data\\NFLDbContext.cs",
+              "RelativeToolTip": "Data\\NFLDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T13:14:16.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Models\\Player.cs",
+              "RelativeDocumentMoniker": "Models\\Player.cs",
+              "ToolTip": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Models\\Player.cs",
+              "RelativeToolTip": "Models\\Player.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T13:10:22.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PlayerSide.cs",
+              "DocumentMoniker": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Models\\PlayerSide.cs",
+              "RelativeDocumentMoniker": "Models\\PlayerSide.cs",
+              "ToolTip": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Models\\PlayerSide.cs",
+              "RelativeToolTip": "Models\\PlayerSide.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-30T13:10:18.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "EspnClient.cs",
               "DocumentMoniker": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Import\\EspnClient.cs",
               "RelativeDocumentMoniker": "Import\\EspnClient.cs",
               "ToolTip": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Import\\EspnClient.cs",
               "RelativeToolTip": "Import\\EspnClient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T12:59:35.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T12:59:35.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "EspnDtos.cs",
               "DocumentMoniker": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Import\\EspnDtos.cs",
               "RelativeDocumentMoniker": "Import\\EspnDtos.cs",
               "ToolTip": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Import\\EspnDtos.cs",
               "RelativeToolTip": "Import\\EspnDtos.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAwC8AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAIA4wEIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-30T12:59:38.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-30T12:59:38.134Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\msaso\\Desktop\\Kodok\\C#\\NFLFeladat-RCS\\NFLDatabase\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAuwBQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-30T11:16:37.875Z",
               "EditorCaption": ""
