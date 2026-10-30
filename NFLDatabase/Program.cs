@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using NFLDatabase.Data;
 using NFLDatabase.Import;
 
 namespace NFLDatabase
@@ -13,6 +15,8 @@ namespace NFLDatabase
 
             builder.Services.AddHttpClient<EspnClient>(c =>
                 c.BaseAddress = new Uri("https://site.api.espn.com/apis/site/v2/sports/football/nfl/"));
+
+            builder.Services.AddDbContext<NFLDbContext>(o => o.UseSqlite(builder.Configuration.GetConnectionString("NFLDB")));
 
             var app = builder.Build();
 
