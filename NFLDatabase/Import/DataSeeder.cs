@@ -4,14 +4,10 @@ using NFLDatabase.Models;
 
 namespace NFLDatabase.Import
 {
-    // Fills the empty database with real teams, players and season stats from ESPN.
-    // Runs once: if there are already teams in the database it does nothing.
     public class DataSeeder
     {
-        // Last full season + the current one
         private static readonly int[] Seasons = { 2025, 2026 };
 
-        // How many stats requests run at the same time
         private const int MaxParallelRequests = 8;
 
         private static readonly HashSet<string> DefensePositions = new()
@@ -80,7 +76,6 @@ namespace NFLDatabase.Import
 
             using var throttle = new SemaphoreSlim(MaxParallelRequests);
 
-            // Only the HTTP calls run in parallel; the DbContext is touched afterwards on one thread
             var tasks = players
                 .SelectMany(p => Seasons.Select(season => (Player: p, Season: season)))
                 .Select(async job =>
@@ -106,7 +101,6 @@ namespace NFLDatabase.Import
 
             foreach (var (player, season, stats) in results)
             {
-                // null = rookie / did not play that season
                 if (stats?.Splits == null)
                     continue;
 
@@ -146,7 +140,6 @@ namespace NFLDatabase.Import
             };
         }
 
-        // Decided by position, because ESPN puts injured / practice squad players in separate groups
         private static PlayerSide GetSide(string position)
         {
             if (SpecialTeamsPositions.Contains(position)) return PlayerSide.SpecialTeams;

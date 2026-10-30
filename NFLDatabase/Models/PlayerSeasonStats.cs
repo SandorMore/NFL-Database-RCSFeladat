@@ -2,7 +2,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace NFLDatabase.Models
 {
-    // One row per player per regular season
     public class PlayerSeasonStats
     {
         public int Id { get; set; }
@@ -16,7 +15,6 @@ namespace NFLDatabase.Models
         [Display(Name = "Games")]
         public int GamesPlayed { get; set; }
 
-        // Passing
         [Display(Name = "Pass Yds")]
         public int PassingYards { get; set; }
 
@@ -26,7 +24,6 @@ namespace NFLDatabase.Models
         [Display(Name = "INT Thrown")]
         public int InterceptionsThrown { get; set; }
 
-        // Rushing
         [Display(Name = "Rush Att")]
         public int RushingAttempts { get; set; }
 
@@ -36,7 +33,6 @@ namespace NFLDatabase.Models
         [Display(Name = "Rush TD")]
         public int RushingTouchdowns { get; set; }
 
-        // Receiving
         [Display(Name = "Rec")]
         public int Receptions { get; set; }
 
@@ -46,14 +42,13 @@ namespace NFLDatabase.Models
         [Display(Name = "Rec TD")]
         public int ReceivingTouchdowns { get; set; }
 
-        // Defense
         [Display(Name = "Tackles")]
         public int TotalTackles { get; set; }
 
         [Display(Name = "TFL")]
         public int TacklesForLoss { get; set; }
 
-        public double Sacks { get; set; }                // half sacks exist, e.g. 7.5
+        public double Sacks { get; set; }      
 
         [Display(Name = "INT")]
         public int Interceptions { get; set; }
@@ -64,14 +59,12 @@ namespace NFLDatabase.Models
         [Display(Name = "FF")]
         public int ForcedFumbles { get; set; }
 
-        // Kicking
         [Display(Name = "FGM")]
         public int FieldGoalsMade { get; set; }
 
         [Display(Name = "FGA")]
         public int FieldGoalAttempts { get; set; }
 
-        // Touchdowns the player scored (passing TDs are scored by the receiver)
         [Display(Name = "Total TD")]
         public int TotalTouchdowns => RushingTouchdowns + ReceivingTouchdowns;
     }

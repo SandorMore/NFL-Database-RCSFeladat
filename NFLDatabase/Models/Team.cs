@@ -11,10 +11,10 @@ namespace NFLDatabase.Models
         public string? ExternalId { get; set; }
 
         [Required, MaxLength(100)]
-        public string Name { get; set; } = "";          // "Kansas City Chiefs"
+        public string Name { get; set; } = "";          
 
         [Required, MaxLength(5)]
-        public string Abbreviation { get; set; } = "";  // "KC"
+        public string Abbreviation { get; set; } = ""; 
 
         [MaxLength(50)]
         public string? City { get; set; }

@@ -69,8 +69,6 @@ namespace NFLDatabase.Import
         public string Href { get; set; } = "";
     }
 
-    // sports.core.api.espn.com .../athletes/{id}/statistics
-    //   ->  { splits: { categories: [ { name: "passing", stats: [ { name: "passingYards", value: 3587 } ] } ] } }
     public class EspnStatsResponse
     {
         public EspnStatsSplits? Splits { get; set; }
