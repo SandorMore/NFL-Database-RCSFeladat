@@ -74,6 +74,80 @@ namespace NFLDatabase.Migrations
                     b.ToTable("Players");
                 });
 
+            modelBuilder.Entity("NFLDatabase.Models.PlayerSeasonStats", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("FieldGoalAttempts")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("FieldGoalsMade")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ForcedFumbles")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("GamesPlayed")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Interceptions")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("InterceptionsThrown")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PassesDefended")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PassingTouchdowns")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PassingYards")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("PlayerId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ReceivingTouchdowns")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ReceivingYards")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Receptions")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RushingAttempts")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RushingTouchdowns")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RushingYards")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("Sacks")
+                        .HasColumnType("REAL");
+
+                    b.Property<int>("Season")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TacklesForLoss")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TotalTackles")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlayerId", "Season")
+                        .IsUnique();
+
+                    b.ToTable("PlayerSeasonStats");
+                });
+
             modelBuilder.Entity("NFLDatabase.Models.Team", b =>
                 {
                     b.Property<int>("Id")
@@ -115,9 +189,26 @@ namespace NFLDatabase.Migrations
                 {
                     b.HasOne("NFLDatabase.Models.Team", "Team")
                         .WithMany("Players")
-                        .HasForeignKey("TeamId");
+                        .HasForeignKey("TeamId")
+                        .OnDelete(DeleteBehavior.SetNull);
 
                     b.Navigation("Team");
+                });
+
+            modelBuilder.Entity("NFLDatabase.Models.PlayerSeasonStats", b =>
+                {
+                    b.HasOne("NFLDatabase.Models.Player", "Player")
+                        .WithMany("SeasonStats")
+                        .HasForeignKey("PlayerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Player");
+                });
+
+            modelBuilder.Entity("NFLDatabase.Models.Player", b =>
+                {
+                    b.Navigation("SeasonStats");
                 });
 
             modelBuilder.Entity("NFLDatabase.Models.Team", b =>

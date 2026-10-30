@@ -24,5 +24,17 @@ namespace NFLDatabase.Import
 
             return res?.Athletes.SelectMany(g => g.Items).ToList() ?? new();
         }
+
+        // Stats live on a different ESPN host, so this uses an absolute URL.
+        // Returns null when the player has no stats for that season (ESPN answers 404).
+        public async Task<EspnStatsResponse?> GetSeasonStatsAsync(string athleteId, int season)
+        {
+            var url = $"https://sports.core.api.espn.com/v2/sports/football/leagues/nfl/seasons/{season}/types/2/athletes/{athleteId}/statistics";
+            var response = await _http.GetAsync(url);
+            if (!response.IsSuccessStatusCode)
+                return null;
+
+            return await response.Content.ReadFromJsonAsync<EspnStatsResponse>();
+        }
     }
 }

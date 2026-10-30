@@ -6,7 +6,7 @@ namespace NFLDatabase
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +18,19 @@ namespace NFLDatabase
 
             builder.Services.AddDbContext<NFLDbContext>(o => o.UseSqlite(builder.Configuration.GetConnectionString("NFLDB")));
 
+            builder.Services.AddScoped<DataSeeder>();
+
             var app = builder.Build();
+
+            // Apply migrations and fill the database from ESPN the first time the app runs
+            using (var scope = app.Services.CreateScope())
+            {
+                var db = scope.ServiceProvider.GetRequiredService<NFLDbContext>();
+                await db.Database.MigrateAsync();
+
+                var seeder = scope.ServiceProvider.GetRequiredService<DataSeeder>();
+                await seeder.SeedAsync();
+            }
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
@@ -38,7 +50,7 @@ namespace NFLDatabase
             app.MapRazorPages()
                .WithStaticAssets();
 
-            app.Run();
+            await app.RunAsync();
         }
     }
 }

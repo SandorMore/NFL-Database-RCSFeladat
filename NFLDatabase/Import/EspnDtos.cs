@@ -68,4 +68,32 @@ namespace NFLDatabase.Import
     {
         public string Href { get; set; } = "";
     }
+
+    // sports.core.api.espn.com .../athletes/{id}/statistics
+    //   ->  { splits: { categories: [ { name: "passing", stats: [ { name: "passingYards", value: 3587 } ] } ] } }
+    public class EspnStatsResponse
+    {
+        public EspnStatsSplits? Splits { get; set; }
+
+        public double Get(string category, string stat) =>
+            Splits?.Categories.FirstOrDefault(c => c.Name == category)?
+                   .Stats.FirstOrDefault(s => s.Name == stat)?.Value ?? 0;
+    }
+
+    public class EspnStatsSplits
+    {
+        public List<EspnStatCategory> Categories { get; set; } = new();
+    }
+
+    public class EspnStatCategory
+    {
+        public string Name { get; set; } = "";
+        public List<EspnStat> Stats { get; set; } = new();
+    }
+
+    public class EspnStat
+    {
+        public string Name { get; set; } = "";
+        public double Value { get; set; }
+    }
 }

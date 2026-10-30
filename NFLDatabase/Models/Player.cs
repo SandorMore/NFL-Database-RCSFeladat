@@ -49,6 +49,8 @@ namespace NFLDatabase.Models
         public int? TeamId { get; set; }
         public Team? Team { get; set; }
 
+        public List<PlayerSeasonStats> SeasonStats { get; set; } = new();
+
         [Display(Name = "Name")]
         public string FullName => $"{FirstName} {LastName}";
     }
